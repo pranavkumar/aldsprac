@@ -2,13 +2,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-        SlNode root = new SlNode(20);
-        root.setNext(new SlNode(10));
+        SlNode root = new SlNode(30);
+        root.setNext(new SlNode(30));
         root.getNext().setNext(new SlNode(30));
         root.getNext().getNext().setNext(new SlNode(45));
         root.getNext().getNext().getNext().setNext(new SlNode(90));
 
-        System.out.print(getMiddle(root).getVal());
+        System.out.print(getFreq(root, 79));
 
 
     }
@@ -59,7 +59,6 @@ public class Main {
     public static SlNode getMiddle(SlNode node) {
         SlNode fast = node;
         SlNode slow = node;
-
         while (fast != null) {
             if (fast.getNext() == null) {
                 return slow;
@@ -71,12 +70,21 @@ public class Main {
                 } else {
                     fast = fast.getNext();
                 }
-
             }
-
-
         }
         throw new RuntimeException("oops");
+    }
+
+    public static int getFreq(SlNode node, int val) {
+        SlNode current = node;
+        int freq = 0;
+        while (current != null) {
+            if (current.getVal() == val) {
+                freq++;
+            }
+            current = current.getNext();
+        }
+        return freq;
     }
 
     public static void traverseSl(SlNode node) {
