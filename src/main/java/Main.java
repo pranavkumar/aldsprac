@@ -2,14 +2,23 @@ public class Main {
     public static void main(String[] args) {
 
 
-        SlNode root = new SlNode(30);
-        root.setNext(new SlNode(30));
-        root.getNext().setNext(new SlNode(30));
-        root.getNext().getNext().setNext(new SlNode(45));
-        root.getNext().getNext().getNext().setNext(new SlNode(90));
+//        SlNode root = new SlNode(30);
+//        root.setNext(new SlNode(30));
+//        root.getNext().setNext(new SlNode(30));
+//        root.getNext().getNext().setNext(new SlNode(45));
+//        root.getNext().getNext().getNext().setNext(new SlNode(90));
+//        System.out.print(getFreq(root, 79));
 
-        System.out.print(getFreq(root, 79));
 
+        QueueUsingStack.Queue queue = new QueueUsingStack.Queue();
+        queue.enqueue(10);
+        queue.enqueue(11);
+        queue.enqueue(12);
+
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
 
     }
 
