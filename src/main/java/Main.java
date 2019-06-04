@@ -8,7 +8,7 @@ public class Main {
         root.getNext().getNext().setNext(new SlNode(45));
         root.getNext().getNext().getNext().setNext(new SlNode(90));
 
-        System.out.print(getNthFromLast(root, 1).getVal());
+        System.out.print(getMiddle(root).getVal());
 
 
     }
@@ -54,6 +54,29 @@ public class Main {
 
         return main;
 
+    }
+
+    public static SlNode getMiddle(SlNode node) {
+        SlNode fast = node;
+        SlNode slow = node;
+
+        while (fast != null) {
+            if (fast.getNext() == null) {
+                return slow;
+            } else {
+                fast = fast.getNext();
+                slow = slow.getNext();
+                if (fast.getNext() == null) {
+                    return slow;
+                } else {
+                    fast = fast.getNext();
+                }
+
+            }
+
+
+        }
+        throw new RuntimeException("oops");
     }
 
     public static void traverseSl(SlNode node) {
