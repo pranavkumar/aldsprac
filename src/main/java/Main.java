@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,15 +12,35 @@ public class Main {
 //        System.out.print(getFreq(root, 79));
 
 
-        QueueUsingStack.Queue queue = new QueueUsingStack.Queue();
-        queue.enqueue(10);
-        queue.enqueue(11);
-        queue.enqueue(12);
+//        QueueUsingStack.Queue queue = new QueueUsingStack.Queue();
+//        queue.enqueue(10);
+//        queue.enqueue(11);
+//        queue.enqueue(12);
+//
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
+//        System.out.println(queue.dequeue());
 
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
-        System.out.println(queue.dequeue());
+//        StackUsingQueue.Stack stack = new StackUsingQueue.Stack();
+//        stack.push(10);
+//        stack.push(13);
+//        stack.push(15);
+//
+//        System.out.println("popped " + stack.pop());
+
+        Stack<Integer> input = new Stack();
+        input.push(5);
+        input.push(7);
+        input.push(3);
+        input.push(3);
+        input.push(3);
+        input.push(12);
+        StackSortingUsingStack stackSortingUsingStack = new StackSortingUsingStack(input);
+        Stack<Integer> sorted = stackSortingUsingStack.sort();
+        while (!sorted.isEmpty()) {
+            System.out.println(sorted.pop());
+        }
 
     }
 
