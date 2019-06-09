@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
@@ -29,19 +31,28 @@ public class Main {
 //
 //        System.out.println("popped " + stack.pop());
 
-        Stack<Integer> input = new Stack();
-        input.push(5);
-        input.push(7);
-        input.push(3);
-        input.push(3);
-        input.push(3);
-        input.push(12);
-        StackSortingUsingStack stackSortingUsingStack = new StackSortingUsingStack(input);
-        Stack<Integer> sorted = stackSortingUsingStack.sort();
-        while (!sorted.isEmpty()) {
-            System.out.println(sorted.pop());
-        }
+//        Stack<Integer> input = new Stack();
+//        input.push(5);
+//        input.push(7);
+//        input.push(3);
+//        input.push(3);
+//        input.push(3);
+//        input.push(12);
+//        StackSortingUsingStack stackSortingUsingStack = new StackSortingUsingStack(input);
+//        Stack<Integer> sorted = stackSortingUsingStack.sort();
+//        while (!sorted.isEmpty()) {
+//            System.out.println(sorted.pop());
+//        }
 
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(10);
+        queue.add(23);
+        queue.add(34);
+        queue.add(44);
+        queue.add(7);
+
+        ReverseQueueUsingStack reverseQueueUsingStack = new ReverseQueueUsingStack(queue);
+        reverseQueueUsingStack.reverse();
     }
 
     public static SlNode reverseSl(SlNode node) {
