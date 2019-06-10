@@ -60,6 +60,8 @@ public class Main {
         root.left.left = new BTNode(4);
         root.left.right = new BTNode(5);
 
+//        root.levelOrder(root);
+        root.insertNode(root, new BTNode(17));
         root.levelOrder(root);
 
     }

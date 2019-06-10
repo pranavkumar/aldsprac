@@ -27,4 +27,26 @@ public class BTNode {
 
     }
 
+    public void insertNode(BTNode root, BTNode node) {
+        Queue<BTNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            BTNode curr = queue.poll();
+            if (curr.left == null) {
+                curr.left = node;
+                break;
+            } else {
+                queue.add(curr.left);
+            }
+            if (curr.right == null) {
+                curr.right = node;
+                break;
+            } else {
+                queue.add(curr.right);
+            }
+
+        }
+
+    }
+
 }
