@@ -44,15 +44,24 @@ public class Main {
 //            System.out.println(sorted.pop());
 //        }
 
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(10);
-        queue.add(23);
-        queue.add(34);
-        queue.add(44);
-        queue.add(7);
+//        Queue<Integer> queue = new LinkedList<>();
+//        queue.add(10);
+//        queue.add(23);
+//        queue.add(34);
+//        queue.add(44);
+//        queue.add(7);
+//
+//        ReverseQueueUsingStack reverseQueueUsingStack = new ReverseQueueUsingStack(queue);
+//        reverseQueueUsingStack.reverse();
 
-        ReverseQueueUsingStack reverseQueueUsingStack = new ReverseQueueUsingStack(queue);
-        reverseQueueUsingStack.reverse();
+        BTNode root = new BTNode(1);
+        root.left = new BTNode(2);
+        root.right = new BTNode(3);
+        root.left.left = new BTNode(4);
+        root.left.right = new BTNode(5);
+
+        root.levelOrder(root);
+
     }
 
     public static SlNode reverseSl(SlNode node) {
